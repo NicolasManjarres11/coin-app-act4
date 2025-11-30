@@ -1,0 +1,4 @@
+### Obtener gastos
+
+
+GET http://localhost:8080/api/gastos
