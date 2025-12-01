@@ -7,5 +7,6 @@ import com.ibero.nmanja.coin_app.model.Gastos;
 public interface GastosService {
 
     List<Gastos> getGastos();
+    Gastos saveGastos(Gastos gasto);
     
 }

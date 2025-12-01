@@ -2,3 +2,15 @@
 
 
 GET http://localhost:8080/api/gastos
+
+
+### Guardar gastos
+
+POST http://localhost:8080/api/gastos
+Content-Type: application/json
+
+{
+    "cuenta": "Ahorros",
+    "monto": 150000,
+    "fecha": "2025-11-25"
+}
