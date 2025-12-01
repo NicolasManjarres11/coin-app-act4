@@ -22,6 +22,11 @@ public class GastosServiceImpl implements GastosService{
         return gastosRepository.findAll();
     }
 
+    @Override
+    public Gastos saveGastos(Gastos gasto) {
+        return gastosRepository.save(gasto);
+    }
+
     
     
 }
