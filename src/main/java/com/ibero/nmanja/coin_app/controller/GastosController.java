@@ -34,6 +34,11 @@ public class GastosController {
         
         return gastosService.saveGastos(gasto);
     }
+
+    @PutMapping("/{id}")
+    public Gastos updateGatos(@PathVariable Long id, @RequestBody Gastos gasto) {
+        return gastosService.update(id, gasto)
+    }
     
     
 }

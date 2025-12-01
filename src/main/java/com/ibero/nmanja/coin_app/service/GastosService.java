@@ -8,5 +8,6 @@ public interface GastosService {
 
     List<Gastos> getGastos();
     Gastos saveGastos(Gastos gasto);
+    Gasttos update(Long id, Gastos gasto);
     
 }

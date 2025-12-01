@@ -28,5 +28,19 @@ public class GastosRepositoryImpl implements GastosRepository{
         return gasto;
     }
 
+    @Override
+    public Gasto update(Long id, Gastos gasto) {
+        return gastos.stream()
+        .filter(g -> g.getId().equals(id))
+        .findFirst()
+        .map(g -> {
+            gasto.setId(id);
+            int index = gastos.indexOf(g);
+            gastos.set(index, gasto);
+            return gasto;
+        })
+        .orElseThrow();
+    }
+
     
 }

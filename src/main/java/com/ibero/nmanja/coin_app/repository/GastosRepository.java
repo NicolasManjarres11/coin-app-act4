@@ -8,5 +8,6 @@ public interface GastosRepository {
 
     List<Gastos> findAll();
     Gastos save(Gastos gastos);
+    Gastos update(Long id, Gastos gasto);
     
 }
