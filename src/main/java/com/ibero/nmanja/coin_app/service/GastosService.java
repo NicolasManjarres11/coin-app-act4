@@ -8,6 +8,7 @@ public interface GastosService {
 
     List<Gastos> getGastos();
     Gastos saveGastos(Gastos gasto);
-    Gasttos update(Long id, Gastos gasto);
+    Gastos update(Long id, Gastos gasto);
+    void delete(Long id);
     
 }

@@ -42,5 +42,10 @@ public class GastosRepositoryImpl implements GastosRepository{
         .orElseThrow();
     }
 
+    @Override
+    public void delete(Long id) {
+        gastos.removeIf(g -> g.getId().equals(id));
+    }
+
     
 }

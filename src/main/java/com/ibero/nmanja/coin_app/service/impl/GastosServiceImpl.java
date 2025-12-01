@@ -32,6 +32,11 @@ public class GastosServiceImpl implements GastosService{
     public Gastos update(Long id, Gastos gasto) {
         return gastosRepository.update(id, gasto);
     }
+
+    @Override
+    public void delete(Long id) {
+        gastosRepository.delete(id);
+    }
     
     
 }

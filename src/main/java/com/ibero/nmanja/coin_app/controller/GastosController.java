@@ -39,6 +39,11 @@ public class GastosController {
     public Gastos updateGatos(@PathVariable Long id, @RequestBody Gastos gasto) {
         return gastosService.update(id, gasto)
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteGastos(@PathVariable Long id) {
+        gastosService.delete(id);
+    }
     
     
 }
