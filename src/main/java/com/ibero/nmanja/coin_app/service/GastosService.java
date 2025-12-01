@@ -10,5 +10,6 @@ public interface GastosService {
     Gastos saveGastos(Gastos gasto);
     Gastos update(Long id, Gastos gasto);
     void delete(Long id);
+    List<Gastos> getByDateRange(LocalDate fromDate, LocalDate toDate);
     
 }

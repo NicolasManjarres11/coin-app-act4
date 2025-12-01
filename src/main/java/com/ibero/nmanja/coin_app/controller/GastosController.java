@@ -44,6 +44,17 @@ public class GastosController {
     public void deleteGastos(@PathVariable Long id) {
         gastosService.delete(id);
     }
+
+    @GetMapping("/dates")
+    public List<Gastos> getByDateRange(
+        @RequestParam("from") String from,
+        @RequestParam("to") String to
+    ) {
+        DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
+        LocalDate fromDate = LocalDate.parse(from, formatter);
+        LocalDate toDate = LocalDate.parse(to, formatter);
+        return gastoService.getByDateRange(fromDate, toDate)
+    }
     
     
 }
