@@ -38,5 +38,10 @@ public class GastosServiceImpl implements GastosService{
         gastosRepository.delete(id);
     }
     
+
+    @Override
+    List<Gastos> getByDateRange(LocalDate from, LocalDate to) {
+        return gastosRepository.findByDateBetween(from, to);
+    }
     
 }

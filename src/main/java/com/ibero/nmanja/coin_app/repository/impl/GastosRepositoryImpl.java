@@ -47,5 +47,19 @@ public class GastosRepositoryImpl implements GastosRepository{
         gastos.removeIf(g -> g.getId().equals(id));
     }
 
+
+    @Override
+    List<Gastos> findByDateBetween(LocalDate from, LocalDate to) {
+        List<Gastos> result = new ArrayList<>();
+        for (Gastos g: gastos) {
+            LocalDate date = g.getFecha();
+            if ( date != null && (date.isEqual(from) || date.isAfter(from))
+                && (date.isEqual(to) || date.isBefore(to))) {
+                    result.add(g);
+            }
+        }
+
+        return result;
+    }
     
 }

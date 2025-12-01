@@ -10,5 +10,6 @@ public interface GastosRepository {
     Gastos save(Gastos gastos);
     Gastos update(Long id, Gastos gasto);
     void delete(Long id);
+    List<Gastos> findByDateBetween(LocalDate from, LocalDate to);
     
 }
